@@ -1,0 +1,47 @@
+.footer-form {
+    
+    margin: 20px 0;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: $ff-ssp;
+    line-height: 1.5;
+    &__input {
+      width: 60%;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: $ff-ssp;
+      line-height: 1.5;
+      border: none;
+    }
+    &__button {
+      width: 15%;
+      padding: 10px 15px;
+      box-sizing: border-box;
+
+      font-size: 16px;
+      font-weight: 700;
+      font-family: $ff-ssp;
+      text-transform: uppercase;
+      line-height: 1.5;
+
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: 0.25s;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+}
+
+@media (max-width: 676px) {
+  .footer-form__input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .footer-form__button {
+    width: 40%;
+  }
+}

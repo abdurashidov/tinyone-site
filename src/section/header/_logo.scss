@@ -1,0 +1,26 @@
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+
+  color: $c-black;
+
+  &__icon {
+    display: block;
+    height: 38px;
+    width: 38px;
+
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+  }
+  &__text {
+    margin-left: 8px;
+    
+    font-size: 30px;
+    font-weight: 700;
+
+    user-select: none;
+  }
+}

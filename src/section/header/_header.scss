@@ -1,0 +1,94 @@
+.header {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: $c-yellow;
+
+  &__head {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: $c-yellow;
+  }
+
+  &__scroll-down {
+    width: 16px;
+    margin: 15px auto;
+  }
+
+  &__content {
+    max-width: 530px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    color: $c-black;
+
+    &-title {
+      margin: 10px 0;
+      font-size: 48px;
+    }
+    &-subtitle {
+      margin: 10px 0 40px 0;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    &-button {
+      display: block;
+      width: 252px;
+      margin: 0 auto;
+      font-size: 22px;
+      background-color: $c-yellow;
+      user-select: none;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.header__scroll-down {
+  position: absolute;
+  right: 1px;
+  left: 1px;
+  bottom: 20px;
+
+  font-size: 32px;
+  font-weight: 900;
+  font-family: $ff-free;
+  color: $c-black;
+  text-align: center;
+
+  animation: scroll-down 2s infinite;
+  cursor: pointer;
+
+  &:hover {
+    color: #000;
+  }
+
+  &:before {
+    content: "\f309";
+  }
+}
+
+@keyframes scroll-down {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+@import "navbar";
+@import "logo";
+@import "menu-button";
+@import "social-icon";
+

@@ -1,0 +1,92 @@
+.post-card {
+  max-width: 220px;
+  padding: 10px 10px 30px;
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  &__wrap {
+    position: relative;
+    display: block;
+    height: 220px;
+    width: 220px;
+    background-repeat: no-repeat;
+    &:hover .post-card__data {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    &:hover .post-card__hover {
+      z-index: 10;
+    }
+  }
+  &__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color: rgba(255, 217, 0, 0.6);
+    color: #fff;
+    
+  }
+  &__views {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 14px;
+    &:before {
+      margin-right: 4px;
+      font-size: 16px;
+      font-family: $ff-free;
+      content: "\f06e";
+    }
+  }
+  &__date {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    &:after {
+      margin-left: 4px;
+      font-size: 16px;
+      font-family: $ff-free;
+      content: "\f017";
+    }
+  }
+  &__hover {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    z-index: -1;
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    &:before {
+      position: absolute;
+      top: calc(50% - 9px);
+      left: calc(50% - 6px);
+      font-size: 15px;
+      font-weight: 700;
+      font-family: $ff-free;
+      color: $c-black;
+      content: "\f067";
+    }
+  }
+  &__body {
+    padding: 10px 0;
+    text-align: center;
+  }
+  &__title {
+    margin: 0;
+    font-size: 22px;
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 16px;
+    color: $c-gray;
+  }
+}

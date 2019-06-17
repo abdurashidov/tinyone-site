@@ -1,0 +1,123 @@
+.social-icon {
+  &_facebook {
+    color: $c-black;
+    &:hover {
+      color: #000;
+    }
+    &::before {
+      content: "\f39e";
+    }
+  }
+  &_twitter {
+    color: $c-black;
+    &:hover {
+      color: #000;
+    }
+    &::before {
+      content: "\f099";
+    }
+  }
+  &_vimeo {
+    color: $c-black;
+    &:hover {
+      color: #000;
+    }
+    &::before {
+      content: "\f27d";
+    }
+  }
+  &_youtube {
+    color: $c-black;
+    &:hover {
+      color: #000;
+    }
+    &::before {
+      content: "\f167";
+    }
+  }
+  &_linkedin {
+    color: $c-black;
+    &:hover {
+      color: #000;
+    }
+    &::before {
+      content: "\f0e1";
+    }
+  }
+}
+
+.icon {
+  &_tablet:before {
+    content: "\f3fa";
+  }
+  &_layer:before {
+    content: "\f5fd";
+  }
+  &_folder:before {
+    font-weight: 400;
+    content: "\f07b";
+  }
+  &_code:before {
+    content: "\f121";
+  }
+  &_mail:before {
+    font-weight: 400;
+    content: "\f0e0";
+  }
+  &_mail-full:before {
+    content: "\f0e0";
+  }
+  &_bookmark:before {
+    font-weight: 400;
+    content: "\f02e";
+  }
+  &_puzzle {
+    color: $c-black;
+    &::before {
+      content: "\f12e";
+    }
+  }
+  &_cloud {
+    color: $c-black;
+    &::before {
+      content: "\f381";
+    }
+  }
+  &_users {
+    color: $c-black;
+    &::before {
+      content: "\f0c0";
+    }
+  }
+  &_thumbs {
+    color: $c-black;
+    &::before {
+      content: "\f164";
+    }
+  }
+  &_quote-left {
+    color: $c-black;
+    &::before {
+      content: "\f10d";
+    }
+  }
+  &_quote-right {
+    color: $c-black;
+    &::before {
+      content: "\f10e";
+    }
+  }
+  &_map-marker {
+    color: $c-black;
+    &::before {
+      content: "\f3c5";
+    }
+  }
+  &_phone {
+    font-weight: 900;
+    color: $c-black;
+    &::before {
+      content: "\f10b";
+    }
+  }
+}

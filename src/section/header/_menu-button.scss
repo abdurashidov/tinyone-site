@@ -1,0 +1,52 @@
+.menu-button {
+  position: absolute;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  padding: 5px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  &__line {
+    display: block;
+    width: 20px;
+    height: 2px;
+
+    border-radius: 1px;
+    background-color: #34404b;
+
+    &::before {
+      position: absolute;
+
+      display: block;
+      width: 20px;
+      height: 2px;
+
+      background-color: #34404b;
+
+      transition: 0.1s;
+      transform: translateY(-6px);
+
+      content: "";
+    }
+    &::after {
+      position: absolute;
+
+      display: block;
+      width: 20px;
+      height: 2px;
+
+      background-color: #34404b;
+
+      transition: 0.1s;
+      transform: translateY(6px);
+
+      content: "";
+    }
+  }
+}

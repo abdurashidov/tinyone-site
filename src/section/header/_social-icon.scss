@@ -1,0 +1,26 @@
+.social-icon {
+  position: absolute;
+  right: 0;
+
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 16px;
+  font-weight: 400;
+  font-family: $ff-brands;
+  color: rgba(34, 34, 34, 0.800);
+
+  &__link {
+    padding: 5px;
+    margin: 5px;
+    &:last-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon__link {
+    display: none;
+  }
+}

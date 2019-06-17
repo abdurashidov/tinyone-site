@@ -1,0 +1,58 @@
+.statistics {
+  &__card {
+    max-width: 140px;
+    margin: 0 30px 30px;
+    padding: 0 15px 15px 15px;
+    text-align: center;
+  }
+  &__icon {
+    font-size: 48px;
+    font-weight: 900;
+    font-family: $ff-free;
+  }
+  &__title {
+    margin: 10px 0 0;
+    font-size: 28px;
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 16px;
+    color: $c-gray;
+  }
+}
+
+.review {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  text-align: center;
+  &__title {
+    font-size: 22px;
+    font-weight: 400;
+  }
+  &__quote {
+    position: relative;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: $ff-free;
+    color: $c-gray;
+    &::before {
+      position: absolute;
+      left: -10%;
+      top: -10%;
+      content: "\f10d";
+    }
+    &::after {
+      position: absolute;
+      right: -10%;
+      bottom: -10%;
+      content: "\f10e";
+    }
+    &-text {
+      font-size: 20px;
+      font-weight: 400;
+      font-family: $ff-ssp;
+    }
+  }
+}

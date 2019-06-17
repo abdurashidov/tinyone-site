@@ -1,0 +1,32 @@
+@import "../header/text";
+@import "../main/section-container";
+
+.features {
+  &__card {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 0 15px 15px 15px;
+  }
+  &__icon {
+    width: 48px;
+    font-size: 38px;
+    font-weight: 900;
+    font-family: $ff-free;
+    text-align: center;
+  }
+  &__text {
+    max-width: 220px;
+    margin-left: 14px;
+
+    &-title {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    &-subtitle {
+      margin: 0;
+      font-size: 16px;
+      color: $c-gray;
+    }
+  }
+}

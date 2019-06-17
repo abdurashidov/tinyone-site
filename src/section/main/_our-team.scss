@@ -1,0 +1,36 @@
+.our-team {
+  &__card {
+    max-width: 200px;
+    margin-bottom: 40px;
+    padding: 0 15px 15px 15px;
+    
+    text-align: center;
+  }
+  &__img {
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 50%;
+  }
+  &__title {
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $c-gray;
+  }
+  &__text {
+    font-size: 14px;
+    color: $c-black;
+  }
+  &__social-icon {
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $ff-brands;
+    cursor: pointer;
+  }
+}

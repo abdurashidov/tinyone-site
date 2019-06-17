@@ -1,0 +1,15 @@
+.navbar {
+  position: relative;
+
+  display: flex;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 960px;
+  height: 80px;
+  margin: 0 auto;
+
+  background-color: $c-yellow;
+}
+

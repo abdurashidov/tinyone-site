@@ -1,4 +1,3 @@
-//Подключаем модули галпа
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -61,24 +60,15 @@ function watch() {
          baseDir: "./"
       }
    });
-   //Следить за SCSS файлами
    gulp.watch('./src/css/**/*.scss', styles)
    gulp.watch('./src/section/**/*.scss', styles)
-   //Следить за JS файлами
    gulp.watch('./src/js/**/*.js', scripts)
-   //При изменении HTML запустить синхронизацию
    gulp.watch("./*.html").on('change', browserSync.reload);
 }
 
-//Таск вызывающий функцию styles
 gulp.task('styles', styles);
-//Таск вызывающий функцию scripts
 gulp.task('scripts', scripts);
-//Таск для очистки папки build
 gulp.task('del', clean);
-//Таск для отслеживания изменений
 gulp.task('watch', watch);
-//Таск для удаления файлов в папке build и запуск styles и scripts
 gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
-//Таск запускает таск build и watch последовательно
 gulp.task('dev', gulp.series('build', 'watch'));

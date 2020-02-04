@@ -3,27 +3,19 @@ const sass = require('gulp-sass');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
+const image = require('gulp-image');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
-const cssFiles = [
-   './src/css/main.scss'
-]
-
-const jsFiles = [
-   './src/js/main.js'
-]
-
 function styles() {
-   return gulp.src(cssFiles)
+   return gulp.src('./src/css/main.scss')
       //Компиляция sass
       .pipe(sass())
       //Объединение файлов в один
       .pipe(concat('style.css'))
       //Добавить префиксы
       .pipe(autoprefixer({
-         browsers: ['last 2 versions'],
+         overrideBrowserslist: ['last 2 versions'],
          cascade: false
       }))
       //Минификация CSS
@@ -35,17 +27,10 @@ function styles() {
       .pipe(browserSync.stream());
 }
 
-function scripts() {
-   return gulp.src(jsFiles)
-      //Объединение файлов в один
-      .pipe(concat('script.js'))
-      //Минификация JS
-      .pipe(uglify({
-         toplevel: true
-      }))
-      //Выходная папка для скриптов
-      .pipe(gulp.dest('./build/js'))
-      .pipe(browserSync.stream());
+function images() {
+   return gulp.src('./src/img/*')
+       .pipe(image())
+       .pipe(gulp.dest('./build/img'));
 }
 
 //Удалить всё в указанной папке
@@ -62,13 +47,12 @@ function watch() {
    });
    gulp.watch('./src/css/**/*.scss', styles)
    gulp.watch('./src/section/**/*.scss', styles)
-   gulp.watch('./src/js/**/*.js', scripts)
    gulp.watch("./*.html").on('change', browserSync.reload);
 }
 
 gulp.task('styles', styles);
-gulp.task('scripts', scripts);
+gulp.task('image', images);
 gulp.task('del', clean);
 gulp.task('watch', watch);
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts)));
+gulp.task('build', gulp.series(clean, gulp.parallel(styles, images)));
 gulp.task('dev', gulp.series('build', 'watch'));
